@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+
+    <!-- Menghubungkan style.css untuk desain tampilan -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="image/icon.png" type="image/x-icon" />
+    <!-- Menghubungkan Font Awesome untuk ikon -->
+    <script defer src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Menghubungkan file main.js untuk fungsionalitas -->
+    <script defer src="main.js"></script>
+
+    <!-- Menyertakan font Roboto dari Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header berisi judul utama aplikasi -->
+    <header>
+      <nav>
+        <img src="image/icon.png" alt="App Icon" />
+        <h1><i class="fas fa-book"></i> BOOKSHELF App</h1>
+      </nav>
+    </header>
+
+    <!-- Main: Konten utama aplikasi -->
+    <main>
+      <!-- Form Tambah Buku Baru -->
+      <section>
+        <h2><i class="fas fa-plus"></i> Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <!-- Input Judul Buku -->
+          <div>
+            <label for="bookFormTitle">Judul</label>
+            <input
+              id="bookFormTitle"
+              type="text"
+              required
+              data-testid="bookFormTitleInput"
+            />
+          </div>
+          <!-- Input Penulis Buku -->
+          <div>
+            <label for="bookFormAuthor">Penulis</label>
+            <input
+              id="bookFormAuthor"
+              type="text"
+              required
+              data-testid="bookFormAuthorInput"
+            />
+          </div>
+          <!-- Input Tahun Buku -->
+          <div>
+            <label for="bookFormYear">Tahun</label>
+            <input
+              id="bookFormYear"
+              type="number"
+              required
+              data-testid="bookFormYearInput"
+            />
+          </div>
+          <!-- Checkbox Status Buku (Selesai Dibaca atau Belum) -->
+          <div>
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input
+              id="bookFormIsComplete"
+              type="checkbox"
+              data-testid="bookFormIsCompleteCheckbox"
+            />
+          </div>
+          <!-- Tombol Submit untuk menambahkan buku ke rak -->
+          <button
+            id="bookFormSubmit"
+            type="submit"
+            data-testid="bookFormSubmitButton"
+          >
+            <i class="fas fa-plus-circle"></i> Masukkan Buku
+          </button>
+        </form>
+      </section>
+
+      <!-- Form Cari Buku -->
+      <section>
+        <h2><i class="fas fa-search"></i> Cari Buku</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <!-- Input Pencarian Judul Buku -->
+          <label for="searchBookTitle">Judul</label>
+          <input
+            id="searchBookTitle"
+            type="text"
+            data-testid="searchBookFormTitleInput"
+          />
+          <button
+            id="searchSubmit"
+            type="submit"
+            data-testid="searchBookFormSubmitButton"
+          >
+            <i class="fas fa-search"></i> Cari
+          </button>
+        </form>
+      </section>
+
+      <!-- Rak Buku: Belum Selesai Dibaca -->
+      <section>
+        <h2><i class="fas fa-book-open"></i> Belum selesai dibaca</h2>
+        <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+      </section>
+
+      <!-- Rak Buku: Selesai Dibaca -->
+      <section>
+        <h2><i class="fas fa-check-circle"></i> Selesai dibaca</h2>
+        <div id="completeBookList" data-testid="completeBookList"></div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <p>ionbisa &copy; dicoding - 2024</p>
+    </footer>
+  </body>
+</html>

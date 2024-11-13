@@ -1,0 +1,167 @@
+/* Reset styling dasar untuk semua elemen */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Styling utama body halaman */
+body {
+  background-color: #f9f9f9;
+  padding: 20px;
+  color: #333;
+}
+
+/* Styling header untuk tetap berada di atas saat di-scroll */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Lebar penuh halaman */
+  z-index: 1000; /* Pastikan header berada di atas elemen lain */
+}
+
+/* Header judul */
+header nav {
+  display: flex;
+  align-items: center; /* Sejajarkan elemen vertikal */
+  justify-content: center; /* Pusatkan elemen */
+  padding: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  position: relative; /* Membantu menjaga ikon tetap di kiri */
+}
+
+/* Styling untuk ikon gambar di header */
+header nav img {
+  height: 50px;
+  width: 50px;
+  position: absolute; /* Menempatkan ikon di sisi kiri */
+  left: 10px; /* Jarak dari tepi kiri */
+}
+
+/* Styling judul utama aplikasi */
+header nav h1 {
+  font-size: 1.5em;
+  margin: 0;
+  text-shadow: 5px 5px 5px black;
+}
+
+/* Margin bawah pada heading */
+h2 {
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+/* Memberi jarak pada konten utama agar tidak tertutup header */
+main {
+  padding-top: 70px; /* Sesuaikan dengan tinggi header */
+}
+
+/* Setiap section memiliki latar putih dan efek bayangan */
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 4px 8px rgb(90, 89, 87);
+}
+
+/* Styling form input */
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styling elemen input dan tombol submit */
+input[type="text"],
+input[type="number"],
+button {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Animasi hover pada tombol */
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Daftar rak buku */
+#incompleteBookList,
+#completeBookList {
+  padding-top: 10px;
+}
+
+/* Styling item buku di dalam rak */
+[data-testid="bookItem"] {
+  background: #fefefe;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Warna dan animasi tombol "Selesai dibaca" */
+[data-testid="bookItemIsCompleteButton"] {
+  background-color: #4caf50;
+}
+
+[data-testid="bookItemIsCompleteButton"]:hover {
+  background-color: #388e3c;
+}
+
+/* Warna dan animasi tombol "Hapus Buku" */
+[data-testid="bookItemDeleteButton"] {
+  background-color: #f44336;
+}
+
+[data-testid="bookItemDeleteButton"]:hover {
+  background-color: #d32f2f;
+}
+
+/* Styling footer untuk tetap berada di bawah saat di-scroll */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Lebar penuh halaman */
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9em;
+  z-index: 1000; /* Pastikan footer di atas elemen lain */
+}
+
+/* Responsif: atur layout untuk layar kecil */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  input[type="text"],
+  input[type="number"],
+  button {
+    width: 100%;
+  }
+}
